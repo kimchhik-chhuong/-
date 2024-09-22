@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: #D7DDE5;
+    font-family: "Roboto", sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    background: #18283B;
+}
+.logo{
+    color: #fff;
+    font-size: 22px;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: #8291A5;
+    padding: 8px 30px;
+    border-radius: 7px;
+    transition: all .3s ease;
+}
+ul li a:hover,
+ul li a.active{
+    color: #fff;
+    background: #0075FF;
+}
+#icon{
+    background-color: #0075FF;
+    padding: 5px 7px 3px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#icon svg {
+    color: #fff;
+    height: 28px;
+}
+#icon:hover{
+    background: #fff;
+}
+#icon:hover svg {
+    color: #0075FF;
+}
+#checkbox,
+#icon {
+    display: none;
+}
+
+@media(max-width:768px) {
+    nav{
+        border-bottom: 1px solid #455468;
+    }
+    ul{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 71px);
+        background: #18283B;
+        left: 0;
+        top: 0;
+        text-align: center;
+        display:none;
+        margin-top: 70px;
+    }
+    ul li{
+        display: block;
+        padding: 10px 15px;
+    }
+    ul li a{
+        display: block;
+        padding: 10px;
+    }
+    #icon{
+        display: block;
+    }
+    #checkbox:checked~ul{
+        display: block;
+    }
+}
